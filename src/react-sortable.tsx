@@ -81,7 +81,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
       {
         // @todo - find a way (perhaps with the callback) to allow AntD components to work
         ref: this.ref,
-        ...classicProps
+        ...this.props
       },
       this.getChildren()
     );

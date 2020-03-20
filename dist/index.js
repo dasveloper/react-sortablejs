@@ -208,12 +208,11 @@ var ReactSortable = /** @class */ (function (_super) {
     };
     ReactSortable.prototype.render = function () {
         var _a = this.props, tag = _a.tag, style = _a.style, className = _a.className, id = _a.id;
-        var classicProps = { style: style, className: className, id: id };
         // if no tag, default to a `div` element.
         var newTag = !tag || tag === null ? "div" : tag;
         return react.createElement(newTag, __assign({ 
             // @todo - find a way (perhaps with the callback) to allow AntD components to work
-            ref: this.ref }, classicProps), this.getChildren());
+            ref: this.ref }, this.props), this.getChildren());
     };
     ReactSortable.prototype.getChildren = function () {
         var _a = this.props, children = _a.children, dataIdAttr = _a.dataIdAttr, _b = _a.selectedClass, selectedClass = _b === void 0 ? "sortable-selected" : _b, _c = _a.chosenClass, chosenClass = _c === void 0 ? "sortable-chosen" : _c, _d = _a.dragClass, _e = _a.fallbackClass, _f = _a.ghostClass, _g = _a.swapClass, _h = _a.filter, filter = _h === void 0 ? "sortable-filter" : _h, list = _a.list;
